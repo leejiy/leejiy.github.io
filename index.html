@@ -13,6 +13,10 @@
 
 
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Link Swiper's CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
 
 		<nav id="nav">
 			<ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333; position:fixed; z-index: 1000; top: 0; width: 100%;">
@@ -88,16 +92,31 @@
 									<h2>NGWS@KNU</h2>
 								</header>
 								<div style="overflow: hidden;">
+
+
+										<div class="swiper mySwiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide"><img src="images/team-1.jpg"/></div>
+												<div class="swiper-slide"><img src="images/team-2.jpg"/></div>
+												<div class="swiper-slide"><img src="images/team-3.jpg"/></div>
+												<div class="swiper-slide"><img src="images/team-4.jpg"/></div>
+												<div class="swiper-slide"><img src="images/team-5.jpg"/></div>
+												<div class="swiper-slide"><img src="images/team-6.jpg"/></div>
+												<div class="swiper-slide"><img src="images/team-7.jpg"/></div>
+											</div>
+											<div class="swiper-button-next"></div>
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-pagination"></div>
+										</div>
 								<ul>
 									<li>
 										<strong>
 										<!-- Current Members: -->
 										I am fortunate to be advising the following talented students:
 										</strong>
-										<img src="images/team-activity.jpg" style="width:18em; height: auto; float: right; margin-left: 2.5em; padding-right:2em;"/>
+
 										<ul style="list-style-type:circle; margin:0px;">
 											<li>
-
 												<strong>
 													Yeonhak Kim
 												</strong>
@@ -134,9 +153,7 @@
 												(Undergraduate, B.S. at Universidad de Almería)
 											</li>
 										</ul>
-
 									</li>
-
 									<li>
 										<strong>
 											Alumni of our research group:
@@ -157,8 +174,6 @@
 										</ul>
 									</li>
 								</ul>
-
-
 								</div>
 
 
@@ -867,6 +882,24 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<!-- Swiper JS -->
+			<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+			<script>
+				var swiper = new Swiper(".mySwiper", {
+					slidesPerView: 1,
+					spaceBetween: 30,
+					loop: true,
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+				});
+			</script>
 
 	</body>
 </html>
